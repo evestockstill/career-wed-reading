@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  The Aggregation Framework is analytic tools in mongoDB allowing you to run various reports or analysis on one or more
+  collections.
+  Aggregation modes include 1. aggregation pipeline 2. map-reduce 3. single purpose aggregation operations
+
+  JWT = includes alg: typ: , sub: name: iat:, signature
+  you can find the user from a jsonwebtoken which will take the user id(payload) and a secret which will be kept in the .env file. You can also put an expiration on the token.
+  You can make a method on your UserSchema to return a jwt.sign({ id: this._id }, process.env.JWT_SECRET) then use this method such as const token = user.getJwtToken().
+  you use JWT for authorization to see once the user is logged in which access routes, and services and resources the are have access to with the token.
+  An example payload ------ {
+  "sub": "1234567890",
+  "name": "John Doe",
+  "admin": true
+  }
+  In authentication, when the user successfully logs in using their credentials, a JSON Web Token will be returned. Since
+  tokens are credentials, great care must be taken to prevent security issues. In general, you should not keep tokens
+  longer than required.
+</body>
+</html>
